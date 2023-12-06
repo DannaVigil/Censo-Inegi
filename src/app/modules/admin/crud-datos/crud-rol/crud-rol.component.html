@@ -1,0 +1,72 @@
+<div>
+    <div class="chartcenter">
+      <mat-tab-group #tabGroup id="tabGroup" mat-stretch-tabs="false" mat-align-tabs="center">
+
+        <mat-tab label="Agregar Rol">
+            <div style="text-align: center; display: flex; justify-content: center;">
+                <form [formGroup]="formulario">
+                    <mat-form-field class="example-full-width" appearance="fill" style="width:300px">
+                        <mat-label>DESCRIPCION</mat-label>
+                        <input matInput id="dato" #dato formControlName="dato" maxlength="30" minlength="1"
+                            style="text-transform: uppercase;">
+                    </mat-form-field>
+                </form>
+                <button mat-fab extended color="primary" style="margin-left: 10px;" (click)="onSubmit()">CREAR</button>
+            </div><br>
+        </mat-tab>
+
+        <mat-tab label="Modificar Rol">
+
+          <div style="text-align: center; display: flex; justify-content: center;">
+            <form [formGroup]="formularioConsultar">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:300px">
+                    <mat-label>ID</mat-label>
+                    <input matInput id="id" #id formControlName="id" maxlength="4" minlength="1"
+                        style="text-transform: uppercase;">
+                </mat-form-field>
+            </form>
+            <button mat-fab extended color="primary" (click)="buscar()">Buscar</button>
+        </div><br>
+        
+        <div>
+            <div class="chartcenter">
+                    <div>
+                        <form [formGroup]="formularioUpdate">
+                            <mat-form-field appearance="fill" style="width:250px">
+                                <mat-label>ROL</mat-label>
+                                <input matInput id="descripcion" #descripcion value="" formControlName="descripcion" maxlength="20">
+                            </mat-form-field>
+        
+                        </form>
+                        <button mat-fab extended color="primary" (click)="actualizar()">Actualizar</button>
+                    </div>
+            </div>
+        </div>
+
+        </mat-tab>
+
+        <mat-tab label="Eliminar Rol">
+          <form [formGroup]="formularioDelete">
+            <mat-form-field class="example-full-width" appearance="fill" style="width:300px">
+                <mat-label>ID</mat-label>
+                <input matInput id="idDelete" #idDelete formControlName="idDelete" maxlength="4" 
+                    style="text-transform: uppercase;">
+            </mat-form-field>
+        </form>
+        <button mat-fab extended color="primary" (click)="validarFormDelete()">Eliminar</button>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+<app-tabla-generica [saberDeQueTipo]="'ROL'" [reload]="reload"></app-tabla-generica>

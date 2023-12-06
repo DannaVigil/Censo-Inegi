@@ -1,0 +1,94 @@
+<div>  
+    <div>
+      <mat-toolbar class="mat-elevation-z8">
+          <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon *ngIf="!sidenav.opened"> menudu </mat-icon>
+          <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+        </button>
+        <div>          
+          <span>Censo Inegi</span>
+      </div>
+      </mat-toolbar>
+      
+      <mat-sidenav-container>
+        <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">      
+          <h4 class="name">Censo Inegi</h4>
+      
+          <mat-divider class="divider"></mat-divider>
+          <button mat-button class="menu-button" routerLink="/Admin/dashboard" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">Dashboard</span>
+          </button>
+          <mat-divider class="divider"></mat-divider>
+
+          <button mat-button class="menu-button" routerLink="/Admin/Rol" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">Rol</span>
+          </button>
+
+
+          <button mat-button class="menu-button" routerLink="/Admin/User" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">User</span>
+          </button>
+
+          <button mat-button class="menu-button" routerLink="/Admin/Municipio" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">Municipio</span>
+          </button>
+
+          <button mat-button class="menu-button" routerLink="/Admin/Localidades" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">Localidades</span>
+          </button>
+
+          <button mat-button class="menu-button" routerLink="/Admin/Tipo-Vivienda" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">Tipo-Vivienda</span>
+          </button>
+
+          <button mat-button class="menu-button" routerLink="/Admin/Act-Economica" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">Act-Economica</span>
+          </button>
+
+          <button mat-button class="menu-button" routerLink="/Admin/Actividades-Vivienda" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">Actividades-Vivienda</span>
+          </button>
+
+          <button mat-button class="menu-button" routerLink="/Admin/Vivienda" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">Vivienda</span>
+          </button>
+
+          <button mat-button class="menu-button" routerLink="/Admin/Personas" (click) ="closeSideNav()">
+            <mat-icon>chrome_reader_mode</mat-icon>
+            <span class="name">Personas</span>
+          </button>
+
+
+
+
+
+
+
+
+
+          
+          <mat-divider class="divider"></mat-divider>
+          <button mat-button class="menu-button" (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span class="name">Cerrar Sesion</span>
+          </button> 
+        </mat-sidenav>
+        <mat-sidenav-content class="content mat-elevation-z8">
+          <div style="width: 100%; height: 100%;" >
+            <router-outlet></router-outlet> 
+          </div>
+          
+        </mat-sidenav-content>
+        
+      </mat-sidenav-container>
+    </div>
+</div>
