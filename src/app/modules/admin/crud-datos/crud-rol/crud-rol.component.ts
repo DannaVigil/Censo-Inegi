@@ -173,7 +173,7 @@ export class CrudRolComponent {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Cita Cancelada',
+          title: 'Elemento Eliminado',
           showConfirmButton: false,
           timer: 2000
         })

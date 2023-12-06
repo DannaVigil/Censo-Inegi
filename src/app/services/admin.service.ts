@@ -116,6 +116,27 @@ export class AdminService {
   delete_Rol(data:any):any{
     return this.http.post(`${urlBase}/Admin/delete_Rol`,data);
   }
+  delete_Users(data:any):any{
+    return this.http.post(`${urlBase}/Admin/delete_Users`,data);
+  }
+  delete_Municipios(data:any):any{
+    return this.http.post(`${urlBase}/Admin/delete_Municipios`,data);
+  }
+  delete_Tipo_Vivienda(data:any):any{
+    return this.http.post(`${urlBase}/Admin/delete_Tipo_Vivienda`,data);
+  }
+  delete_Actividad_Economica(data:any):any{
+    return this.http.post(`${urlBase}/Admin/delete_Actividad_Economica`,data);
+  }
+  delete_Actividades_Viviendas(data:any):any{
+    return this.http.post(`${urlBase}/Admin/delete_Actividades_Viviendas`,data);
+  }
+  delete_Viviendas(data:any):any{
+    return this.http.post(`${urlBase}/Admin/delete_Viviendas`,data);
+  }
+  delete_Personas(data:any):any{
+    return this.http.post(`${urlBase}/Admin/delete_Personas`,data);
+  }
 
 
 
