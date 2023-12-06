@@ -99,12 +99,12 @@ export class CrudViviendaComponent {
   }
   async save(): Promise<any> {
     this.source = {
-      "curp": this.curpv, "nombre": this.nombrev, "paterno": this.paternov,
-      "materno": this.maternov, "iD_VIVIENDA": parseInt(this.idv), 
+      "iD_TIPO_VIVIENDA": parseInt(this.curpv), "iD_MUNICIPIO": this.nombrev, "iD_LOCALIDAD": this.paternov,
+      "calle": this.maternov, "nuM_EXT": this.idv, "colonia": this.coloniaI.nativeElement.value,
       "iD_CAPTURA":this.idUser
     }
     console.log(this.source)
-    this.adminService.insert_Personas(this.source).subscribe(() => {
+    this.adminService.insert_Vivienda(this.source).subscribe(() => {
       Swal.fire({
         position: 'top-end',
         icon: 'success',

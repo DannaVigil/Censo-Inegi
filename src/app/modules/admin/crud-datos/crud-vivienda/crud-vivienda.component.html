@@ -1,12 +1,12 @@
 <div style="text-align: center;">
     <form [formGroup]="formulario">
         <mat-form-field class="example-full-width" appearance="fill" style="width:300px">
-          <mat-label>CURP</mat-label>
+          <mat-label>tipo_vivienda</mat-label>
           <input matInput id="tipo_vivienda" #tipo_vivienda formControlName="tipo_vivienda"  style="text-transform: uppercase;">
         </mat-form-field>
   
         <mat-form-field appearance="fill" style="width:250px">
-          <mat-label>NOMBRE</mat-label>
+          <mat-label>municipio</mat-label>
           <input matInput id="municipio" #municipio value="" formControlName="municipio" maxlength="15">
         </mat-form-field>
       
@@ -17,40 +17,22 @@
   
         <mat-form-field appearance="fill" style="width:250px">
           <mat-label>calle</mat-label>
-          <input matInput id="calle" #calle value="calle" formControlName="calle" maxlength="15">
+          <input matInput id="calle" #calle value="" formControlName="calle" maxlength="15">
         </mat-form-field>
       
         <mat-form-field appearance="fill" style="width:250px">
-          <mat-label>TELEFONO</mat-label>
-          <input matInput id="telefono" #telefono value="telefono" formControlName="telefono" maxlength="10">
+          <mat-label>num_ext</mat-label>
+          <input matInput id="num_ext" #num_ext value="" formControlName="num_ext" maxlength="10">
         </mat-form-field>
-  
+
         <mat-form-field appearance="fill" style="width:250px">
-          <mat-label>NIVEL</mat-label>
-          <mat-select id="nivel" #nivel value="nivel" formControlName="nivel">
-            <mat-option *ngFor="let item of niveles" [value]="item">
-              {{item}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      
-        <mat-form-field appearance="fill" style="width:200px">
-          <mat-label>MUNICIPIO</mat-label>
-          <mat-select id="municipio" #municipio value="municipio" formControlName="municipio">
-            <mat-option *ngFor="let item of municipios" [value]="item">
-              {{item}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+            <mat-label>colonia</mat-label>
+            <input matInput id="colonia" #colonia value="" formControlName="colonia" maxlength="10">
+          </mat-form-field>
   
-        <mat-form-field appearance="fill" style="width:200px">
-          <mat-label>ASUNTO</mat-label>
-          <mat-select id="asunto" #asunto value="asunto" formControlName="asunto">
-            <mat-option *ngFor="let item of asuntos" [value]="item">
-              {{item}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+
+  
+
 
 
     </form>
