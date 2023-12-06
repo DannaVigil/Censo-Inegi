@@ -1,4 +1,36 @@
-<p>crud-personas works!</p>
+<div style="text-align: center;">
+    <form [formGroup]="formulario">
+        <mat-form-field class="example-full-width" appearance="fill" style="width:300px">
+          <mat-label>CURP</mat-label>
+          <input matInput id="curp" #curp formControlName="curp" maxlength="18" minlength="18" style="text-transform: uppercase;">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill" style="width:300px">
+            <mat-label>ID_VIVIENDA</mat-label>
+            <input matInput id="id_vivienda" #id_vivienda formControlName="id_vivienda" style="text-transform: uppercase;">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" style="width:250px">
+          <mat-label>NOMBRE</mat-label>
+          <input matInput id="nombre" #nombre value="nombre" formControlName="nombre" maxlength="15">
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" style="width:250px">
+          <mat-label>PATERNO</mat-label>
+          <input matInput id="paterno" #paterno value="paterno" formControlName="paterno" maxlength="15"> 
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" style="width:250px">
+          <mat-label>MATERNO</mat-label>
+          <input matInput id="materno" #materno value="materno" formControlName="materno" maxlength="15">
+        </mat-form-field>
+      
+      <!-- <mat-label >User: {{nombre}}</mat-label> -->
+    </form>
+
+    <button mat-fab extended color="primary" (click)="validar()">Guardar</button>
+
+  </div><br>
 
 
 <app-tabla-generica [saberDeQueTipo]="'PERSONAS'"></app-tabla-generica>

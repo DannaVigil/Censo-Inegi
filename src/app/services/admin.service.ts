@@ -80,13 +80,13 @@ export class AdminService {
     return this.http.post(`${urlBase}/Admin/update_Municipio`,data);
   }
   get_Unique_Tipo_Vivienda(data:any):any{
-    return this.http.post(`${urlBase}/Admin/get_Unique_Tipo_Vivienda`,data);
+    return this.http.post(`${urlBase}/Admin/get_Unique_TipoVivienda`,data);
   }
   update_Tipo_Vivienda(data:any):any{
     return this.http.post(`${urlBase}/Admin/update_Tipo_Vivienda`,data);
   }
   get_Unique_Actividad_Economica(data:any):any{
-    return this.http.post(`${urlBase}/Admin/get_Unique_Actividad_Economica`,data);
+    return this.http.post(`${urlBase}/Admin/get_Unique_ActividadEconomica`,data);
   }
   update_Actividad_Economica(data:any):any{
     return this.http.post(`${urlBase}/Admin/update_Actividad_Economica`,data);
@@ -139,8 +139,9 @@ export class AdminService {
   }
 
 
-
-
+  getUser(data:any):any{
+    return this.http.post(`${urlBase}/Login/getUser`,data);
+  }
 
 
 
